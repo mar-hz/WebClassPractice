@@ -12,6 +12,17 @@ window.onload = () => {
         window.location = "../index.html";
     }
 
+    const sendMsg = () => {
+        chat.value += "\n" + msg.value;
+        msg.value = "";
+    }
+
     const btnLogout = document.getElementById("btn-logout");
+    const btnSend = document.getElementById("btn-send");
+    const chat = document.getElementById("chat");
+    const msg = document.getElementById("msg");
+
+
     btnLogout.addEventListener("click", logout);
+    btnSend.addEventListener("click", sendMsg);
 }
